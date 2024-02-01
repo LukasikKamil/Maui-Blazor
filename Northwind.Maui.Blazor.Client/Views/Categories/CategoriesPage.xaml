@@ -1,0 +1,64 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:Northwind.Maui.Blazor.Client"
+             xmlns:categories="clr-namespace:Northwind.Maui.Blazor.Client.Views.Categories"
+             x:Class="Northwind.Maui.Blazor.Client.Views.CategoriesPage"
+             Title="Categories"
+             BackgroundColor="{StaticResource PageBackgroundColor}">
+
+    <ContentPage.BindingContext>
+        <categories:CategoriesViewModel />
+    </ContentPage.BindingContext>
+
+    <VerticalStackLayout>
+        <HorizontalStackLayout Spacing="20" Padding="20">
+            <Label Text="{Binding InfoMessage}" />
+            <Label Text="{Binding ErrorMessage}" TextColor="Red"
+                   IsVisible="{Binding ErrorMessageVisible}" 
+                   ToolTipProperties.Text="{Binding ErrorMessage}" />
+        </HorizontalStackLayout>
+
+        <CarouselView x:Name="carouselView" 
+                      ItemsSource="{Binding .}" 
+                      EmptyView="No results matched your filter."
+                      Loop="False">
+
+            <CarouselView.ItemTemplate>
+                <DataTemplate>
+                    <Frame HasShadow="True"
+                           BorderColor="{StaticResource PrimaryTextColor}"
+                           CornerRadius="10"
+                           Margin="20"
+                           HeightRequest="450"
+                           HorizontalOptions="Center"
+                           VerticalOptions="Center">
+                        <VerticalStackLayout>
+                            <Label Text="{Binding CategoryName}"
+                                   FontAttributes="Bold"
+                                   FontSize="18"
+                                   HorizontalOptions="Center"
+                                   VerticalOptions="Center" />
+                            <Image Source="{Binding PicturePath}"
+                                   Aspect="AspectFill"
+                                   HeightRequest="250"
+                                   WidthRequest="375"
+                                   HorizontalOptions="Center" />
+                            <Label Text="{Binding Description}"
+                                   FontAttributes="Italic"
+                                   HorizontalOptions="Center"
+                                   MaxLines="5"
+                                   LineBreakMode="TailTruncation" />
+                        </VerticalStackLayout>
+                    </Frame>
+                </DataTemplate>
+            </CarouselView.ItemTemplate>
+
+            <CarouselView.IndicatorView>
+                <IndicatorView x:Name="indicatorView"
+                               IndicatorColor="{StaticResource PageBackgroundColor}"
+                               SelectedIndicatorColor="DeepSkyBlue"
+                               HorizontalOptions="Center" />
+            </CarouselView.IndicatorView>
+        </CarouselView>
+    </VerticalStackLayout>
+</ContentPage>

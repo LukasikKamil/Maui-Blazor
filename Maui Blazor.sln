@@ -1,0 +1,33 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34511.84
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Northwind.Maui.Blazor.Client", "Northwind.Maui.Blazor.Client\Northwind.Maui.Blazor.Client.csproj", "{C602D1F0-3BE9-435A-A166-23EE515E792D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Northwind.Maui.WebApi.Service", "Northwind.Maui.WebApi.Service\Northwind.Maui.WebApi.Service.csproj", "{10448B2A-A908-46B7-B8FD-78F25AF9A4AA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C602D1F0-3BE9-435A-A166-23EE515E792D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C602D1F0-3BE9-435A-A166-23EE515E792D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C602D1F0-3BE9-435A-A166-23EE515E792D}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{C602D1F0-3BE9-435A-A166-23EE515E792D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C602D1F0-3BE9-435A-A166-23EE515E792D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C602D1F0-3BE9-435A-A166-23EE515E792D}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{10448B2A-A908-46B7-B8FD-78F25AF9A4AA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{10448B2A-A908-46B7-B8FD-78F25AF9A4AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{10448B2A-A908-46B7-B8FD-78F25AF9A4AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{10448B2A-A908-46B7-B8FD-78F25AF9A4AA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A5DD4C82-42A0-496A-A458-FB9BD0778BEE}
+	EndGlobalSection
+EndGlobal
